@@ -25,13 +25,15 @@ body {
     color: darkgreen;
     margin-left: 60px;
     margin-top: 150px;
-    width: 25ch;
+    width: 26ch;
     overflow: hidden;
     letter-spacing: 5px;
     white-space: nowrap;
+    border: none;
     border-right: 4px solid #083812;
     animation: flashing-border 0.25s step-start infinite,
     printed-text 1s steps(29);
+    background-color: #03131E;
 }
 #TextConsole{
     font-family: 'Tektur', monospace;
@@ -89,7 +91,23 @@ body {
 #MoonsN41_Info{
     display: none;
 }
+#BackButton{
+    color: darkgreen;
+    font-size: 45px;
+    display: none;
+    margin-left: 80%;
+    font-family: 'Tektur', monospace;
+    width: 140px;
+    height: 60px;
+    margin-top: 150px;
+    background-color: #03131E;
+    border: none;
+
+}
 .Info{
+    display: none;
+}
+#MoonsN21, #MoonsN41, #MoonsN71, #MoonsN220, #MoonsN56, #MoonsN61, #MoonsN85, #MoonsN7, #MoonsN8{
     display: none;
 }
 .Moons{
@@ -98,11 +116,19 @@ body {
     height: 30px;
     text-align: center;
 }
-.Moons:hover{
-    background-color: forestgreen;
-    cursor: pointer;
+#WaitPage, #RequestFound{
+    overflow: hidden;
+    white-space: nowrap;
+    display: None;
+    margin-top: 10%;
+    margin-left: 25%;
+    width: 25ch;
+    font-size: 50px;
+    color: darkgreen;
+    border-right: 4px solid #083812;
+    animation: flashing-border 0.25s step-start infinite,
+    printed-text 1s steps(29); ;
 }
-
 @keyframes flashing-border {
     0%{
         border-color: #083812;
@@ -119,6 +145,11 @@ body {
         width: 0;
     }
 }
-#Storage:hover::before, #Items:hover::before, #Moon:hover::before, #Other:hover::before, #Bestiary:hover::before, .BackMoon:hover::before{
-    content: " > ";
+#Storage:hover::before, #Items:hover::before, #Moon:hover::before, #Other:hover::before, #Bestiary:hover::before, #ButtonTerminal:hover::before{
+    content: "  >  ";
 }
+.Moons:hover{
+    background-color: forestgreen;
+    cursor: pointer;
+}
+
