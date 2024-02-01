@@ -9,6 +9,7 @@ let StorageInfo = document.getElementById("StorageInfo")
 let Other = document.getElementById("Other")
 let OtherInfo = document.getElementById("OtherInfo")
 
+
 function StyleBlockTerminal(HtmlElement){
     let LengthElement = HtmlElement.innerHTML.length + 5
     HtmlElement.style.width = `${LengthElement}ch`
@@ -16,6 +17,7 @@ function StyleBlockTerminal(HtmlElement){
     HtmlElement.style.borderRight = "4px solid #083812"
     HtmlElement.style.animation = `printed-text 0.2s steps(${LengthElement}),\n  flashing-border 0.25s step-start infinite`
 }
+
 
 function StyleBlockTerminalInfo(HtmlElement){
     let LengthElement = HtmlElement.innerHTML.length + 7
@@ -114,8 +116,10 @@ ButtonTerminal.addEventListener("click", function () {
                                     })
                             })
                     })
-            })
+                })
     })
+
+
 function RequestToServer(){
     let WaitPage = document.getElementById("WaitPage")
     let RequestFound = document.getElementById("RequestFound")
@@ -142,6 +146,8 @@ function RequestToServer(){
             })
         })
 }
+
+
 function ClickMoon(){
     let LiMoon = document.getElementById("Moons")
     let textConsole = document.getElementById("TextConsole")
@@ -167,16 +173,22 @@ function ClickMoon(){
             }, 5100)
         })
 }
+
+
+let Moons = document.getElementById("Moons")
+let listElement = document.getElementById("MoonsN71")
+
 function BackButtonClick(HtmlElementLi,HtmlElementInfo){
     let textConsole = document.getElementById("TextConsole")
     let BackButtonMoon = document.getElementById("BackButton")
-    HtmlElementInfo = document.getElementById(HtmlElementInfo)
+    // HtmlElementInfo = document.getElementById(HtmlElementInfo) // Исправлено на listElement
     HtmlElementLi = document.getElementById(HtmlElementLi)
     HtmlElementLi.style.display = "none"
     HtmlElementInfo.style.display = "none"
     textConsole.style.display = "block"
     BackButtonMoon.style.display = "none"
 }
+
 function ClickBackButtonMoon(){
-    BackButtonClick("Moons","MoonsInfo" )
+    BackButtonClick("Moons", listElement)
 }
