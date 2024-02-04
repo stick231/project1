@@ -147,15 +147,16 @@ function RequestToServer(){
         })
 }
 
-
-function ClickMoon(){
-    let LiMoon = document.getElementById("Moons")
-    let textConsole = document.getElementById("TextConsole")
-    let BackButtonMoon = document.getElementById("BackButton")
-    let MoonsN71 = document.getElementById("MoonsN71")
+function ClickMenu(Menu, First, BackButtonMenu, InfoPrice){ // по возможности добавить info
+    let AllBackButton = document.getSelection("#BackButton")
+    let TextConsole = document.getElementById("TextConsole")
+    let MenuDoc = document.getElementById(Menu)
+    let InfoPriceDoc = document.getElementById(InfoPrice)
+    let FirstDoc = document.getElementById(First)
+    let BackButtonMenuDoc = document.getElementById(BackButtonMenu)
     const p = new Promise((resolve) => {
         setTimeout(() => {
-            textConsole.style.display = "None"
+            TextConsole.style.display = "None"
             resolve()
         }, 100)
     })
@@ -166,29 +167,48 @@ function ClickMoon(){
     })
         p.then(() => {
             setTimeout(() =>{
-                LiMoon.style.display = "block"
-                textConsole.style.display = "None"
-                BackButtonMoon.style.display = "block"
-                MoonsN71.style.display = "block"
+                let AllBackButton = document.getElementById("#BackButton")
+                // for(let i=0; i < AllBackButton.length; i++){
+                //     if (AllBackButton != null && AllBackButton.length < 1) {
+                // AllBackButton[i].style.display = 'block';
+                // }} не работает
+                MenuDoc.style.display = "block"
+                TextConsole.style.display = "None"
+                BackButtonMenuDoc.style.display = "block"
+                FirstDoc.style.display = "block"
+                AllBackButton.style.display = "Block" // к конктретному елементу или через цикл
+                InfoPriceDoc.style.block = "block"
             }, 5100)
         })
+}
+
+function ClickMoon(){
+    ClickMenu("Moons",  "MoonsN71", "BackButtonMoon")
+}
+function ClickItems(){
+    
 }
 
 
 let Moons = document.getElementById("Moons")
 let listElement = document.getElementById("MoonsN71")
 
-function BackButtonClick(HtmlElementLi,HtmlElementInfo){
+function BackButtonClick(HtmlElementLi,HtmlElementInfo, BackButton, HtmlElementInfoPrice){
+    let AllBackButton = document.getElementById("BackButton")
     let textConsole = document.getElementById("TextConsole")
-    let BackButtonMoon = document.getElementById("BackButton")
+    let HtmlElementInfomq = document.getElementById(HtmlElementInfo)
+    let BackButtonM = document.getElementById(BackButton)
     // HtmlElementInfo = document.getElementById(HtmlElementInfo) // Исправлено на listElement
     HtmlElementLi = document.getElementById(HtmlElementLi)
     HtmlElementLi.style.display = "none"
-    HtmlElementInfo.style.display = "none"
+    HtmlElementInfomq.style.display = "none"
     textConsole.style.display = "block"
-    BackButtonMoon.style.display = "none"
+    BackButtonM.style.display = "none"
+    HtmlElementInfoPrice.style.display = "Block"
+    AllBackButton.style.display = "none"
 }
 
+
 function ClickBackButtonMoon(){
-    BackButtonClick("Moons", listElement)
+    BackButtonClick("Moons", "MoonsN71", "BackButtonMoon")
 }

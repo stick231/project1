@@ -91,10 +91,10 @@ body {
 #MoonsN41_Info{
     display: none;
 }
-#BackButton{
+#BackButtonMoon, #BackButtonItems, #BackButtonStorage, #BackButtonBestiary, #BackButtonOther{
     color: darkgreen;
     font-size: 45px;
-    display: none;
+    display: block;
     margin-left: 85%;
     font-family: 'Tektur', monospace;
     width: 140px;
@@ -104,7 +104,7 @@ body {
     border: none;
 
 }
-.Info{
+#BackButtonMoon, #BackButtonItems, #BackButtonBestiary, #BackButtonStorage, #BackButtonOther{
     display: none;
 }
 #MoonsN21, #MoonsN41, #MoonsN71, #MoonsN220, #MoonsN56, #MoonsN61, #MoonsN85, #MoonsN7, #MoonsN8{

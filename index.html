@@ -11,7 +11,7 @@
 <div id="TextConsole">
     <div id="Moon" onclick="ClickMoon()">Луны</div>
     <div id="MoonInfo">Чтобы увидеть список лун, к которым автопилот может направиться</div>
-    <div id="Items">Предметы</div>
+    <div id="Items" onclick="ClickItems()">Предметы</div>
     <div id="ItemsInfo">Ознакомиться с выбором полезных товаров фирменного магазина</div>
     <div id="Bestiary">Бестиарий</div>
     <div id="BestiaryInfo">Просмотреть список зарегистрированных существ</div>
@@ -54,7 +54,36 @@
         У Титана очень маленькая открытая карта и очень большая внутренняя карта, но не заблуждайтесь; Небольшое расстояние до главного входа не означает, что у вас нет опасных внешних врагов, которых нужно преодолеть. Лучшая стратегия выживания на Титане — это как можно быстрее разграбить и сбросить обломки вниз по лестнице, ведущей обратно на корабль. Будьте осторожны и не заходите слишком глубоко в особняк!
         В то время как земной левиафан встречается редко, безглазые собаки и хранитель леса часто встречаются за пределами нереста. Помните, что они тоже могут подняться по лестнице. Во время грабежа в помещении вы можете столкнуться с любым типом врагов, но особенно с щелкунчиками , змееголовками , бункерными пауками , папоротниками- орляками и шутом .</div>
 </div>
-<button id="BackButton" onclick="ClickBackButtonMoon()">Назад</button>
+<div id="ItemsList">
+    <div id="ProFlashLight"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+<div id="ItemsListInfo">
+    <div id="ProFlashLightInfo"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+<div id="ItemsListInfoPrice">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+
+
+<div id="BackButton">
+    <div id="BackButtonMoon" onclick="ClickBackButtonMoon()">Назад</div>
+    <button Id="BackButtonItems" onclick="">Назад</button>
+    <button id="BackButtonStorage" onclick="">Назад</button>
+    <button id="BackButtonBestiary" onclick="">Назад</button>
+    <button id="BackButtonOther" onclick="">Назад</button>    
+</div>
 <script src="script.js"></script>
 </body>
 </html>
